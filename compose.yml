@@ -11,6 +11,7 @@ services:
     networks:
       rededns:
         ipv4_address: 172.24.0.100
+    dns: 127.0.0.1
   cliente:
     build: cliente
     hostname: cliente1
