@@ -6,6 +6,8 @@ services:
       - 127.0.0.1:53:53    #So na rede principal
     volumes:
       - ./dnsserver/named.conf.options:/etc/bind/named.conf.options
+      - ./dnsserver/named.conf.local:/etc/bind/named.conf.local
+      - ./dnsserver/db.starwars.lan:/etc/bind/db.starwars.lan
     networks:
       rededns:
         ipv4_address: 172.24.0.100
