@@ -7,6 +7,8 @@ RUN apt update  && apt install -y \
     bind9 \
     bind9utils \
     dnsutils \
+    nano \
+    vim \
     && rm -rf /var/lib/apt/lists/*
 
 # COPY named.conf.options /etc/bind/named.conf.options
