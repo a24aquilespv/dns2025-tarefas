@@ -3,23 +3,22 @@ services:
     build: dnsserver
     hostname: dnsserver
     ports:
-      - 10.24.0.100:53:53    #So na rede principal
+      - 127.0.0.1:53:53    #So na rede principal
     volumes:
       - ./dnsserver/named.conf.options:/etc/bind/named.conf.options
     networks:
       rededns:
-        ipv4_address: 172.25.0.11
+        ipv4_address: 172.24.0.100
   cliente:
     build: cliente
     hostname: cliente1
     networks:
       rededns:
-        ipv4_address: 172.25.0.100
-    dns: 172.25.0.11
+        ipv4_address: 172.24.0.10
+    dns: 172.24.0.100
 networks:
   rededns:
     ipam:
       config:
-        - subnet: 172.25.0.0/16
-
+        - subnet: 172.24.0.0/16
 
