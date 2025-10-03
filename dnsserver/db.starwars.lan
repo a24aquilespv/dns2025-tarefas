@@ -13,10 +13,10 @@ $TTL    604800
 starwars.lan.    IN  A  172.24.0.100
 ns.starwars.lan.  IN  A 172.24.0.100
 darthvader  IN  A   192.168.20.10
+darthsidious    IN  A   192.168.20.11
 skywalker   IN  A   192.168.20.101
 skywalker   IN  A   192.168.20.111
 luke    IN  A   192.168.20.22
-darthsidious    IN  CNAME   darthsidious
 yoda    IN  A   192.168.20.24
 yoda    IN  A   192.168.20.25
 c3p0    IN  A   192.168.20.26
