@@ -5,7 +5,7 @@
 
 $~ dig @localhost www.edu.xunta.es
 
-
+```dns
 ; <<>> DiG 9.20.11-4-Debian <<>> @localhost www.edu.xunta.es
 ; (2 servers found)
 ;; global options: +cmd
@@ -27,11 +27,13 @@ edu.xunta.es.           27861   IN      A       85.91.64.65
 ;; SERVER: 127.0.0.1#53(localhost) (UDP)
 ;; WHEN: Tue Oct 07 06:56:30 UTC 2025
 ;; MSG SIZE  rcvd: 103
-
+```
 
 ## 2. Configura o servidor BIND9 para que empregue como reenviador 8.8.8.8. pegando no documento de entrega contido do ficheiro /etc/bind/named.conf.options e a saída deste comando: dig @localhost www.mecd.gob.es 
 
 **Fichero "named.conf.options":**
+
+```js
 options {
         directory "/var/cache/bind";
         forwarders {
@@ -45,10 +47,11 @@ options {
 
         listen-on-v6 {none;};
 };
-
+```
 
 $~dig @localhost www.mecd.gob.es
 
+```dns
 ; <<>> DiG 9.20.11-4-Debian <<>> @localhost www.mecd.gob.es
 ; (2 servers found)
 ;; global options: +cmd
@@ -69,12 +72,13 @@ www.mecd.gob.es.        21470   IN      A       212.128.114.116
 ;; SERVER: 127.0.0.1#53(localhost) (UDP)
 ;; WHEN: Tue Oct 07 07:01:27 UTC 2025
 ;; MSG SIZE  rcvd: 88
-
+```
 
 ## 3. Instala unha zona primaria de resolución directa chamada "starwars.lan" e engade os seguintes rexistros de recursos (a maiores dos rexistros NS e SOA imprescindibles):
 
 **Contenido del fichero de la zona "starwars.lan":**
 
+```dns
 ;
 ; Zona directa para starwars.lan
 ;
@@ -99,12 +103,13 @@ c3p0    IN  A   192.168.20.26
 palpatine   IN  CNAME   darthsidious.starwars.lan.
 @   IN  MX  10  c3p0.starwars.lan.
 lenda   IN TXT "Que a forza te acompanhe"
-
+```
 
 ## 4. Instala unha zona de resolución inversa que teña que ver co enderezo do equipo darthvader, e engade rexistros PTR para os rexistros tipo A do exercicio anterior. Pega no documento de entrega o contido do arquivo de zona, e do arquivo /etc/bind/named.conf.local
 
 **Fichero de la zona de resolución inversa "20.168.192":**
 
+```dns
 ;
 ; Zona de búsqueda inversa para 
 ; IPs de la subred 192.168.20.0/24
@@ -126,9 +131,12 @@ $TTL    604800
 26  IN  PTR c3p0.starwars.lan.
 101  IN  PTR skywalker.starwars.lan.
 111  IN  PTR skywalker.starwars.lan.
+```
+
 
 **Fichero "named.conf.local":**
 
+```js
 //
 // Do any local configuration here
 //
@@ -142,22 +150,26 @@ zone "20.168.192.in-addr.arpa" {
 	type master;
 	file "/etc/bind/db.20.168.192";
 };
-
+```
 
 ## 5. Comproba que podes resolver os distintos rexistros de recursos. Pega no documento de entrega a saída dos comandos:
 
 ###### nslookup darthvader.starwars.lan localhost
 
+```
 Server:         localhost
 Address:        127.0.0.1#53
 
 Name:   darthvader.starwars.lan
 Address: 192.168.20.10
+```
 
 ![darthvader.starwars.lan](./img/image.png)
 
+
 ###### nslookup skywalker.starwars.lan localhost
 
+```
 Server:         localhost
 Address:        127.0.0.1#53
 
@@ -165,25 +177,32 @@ Name:   skywalker.starwars.lan
 Address: 192.168.20.101
 Name:   skywalker.starwars.lan
 Address: 192.168.20.111
+```
 
 ![skywalker.starwars.lan](./img/image-1.png)
 
+
 ###### nslookup starwars.lan localhost
 
+```
 Server:         localhost
 Address:        127.0.0.1#53
 
 Name:   starwars.lan
 Address: 172.24.0.100
+```
 
 ![starwars.lan](./img/image-2.png)
 
+
 ###### nslookup -q=mx starwars.lan localhost
 
+```
 Server:         localhost
 Address:        127.0.0.1#53
 
 starwars.lan    mail exchanger = 10 c3p0.starwars.lan.
+```
 
 ![starwars.lan MX](./img/image-4.png)
 
@@ -200,6 +219,7 @@ starwars.lan    nameserver = darthsidious.starwars.lan.
 
 ###### nslookup -q=soa starwars.lan localhost
 
+```
 Server:         localhost
 Address:        127.0.0.1#53
 
@@ -211,22 +231,27 @@ starwars.lan
         retry = 86400
         expire = 2419200
         minimum = 604800
+```
 
 ![starwars.lan SOA](./img/image-6.png)
 
 
 ###### nslookup -q=txt lenda.starwars.lan localhost
 
+```
 Server:         localhost
 Address:        127.0.0.1#53
 
 lenda.starwars.lan      text = "Que a forza te acompanhe"
+```
 
 ![lenda.starwars.lan](./img/image-7.png)
 
 
 ###### nslookup 192.168.20.11 localhost
 
+```
 11.20.168.192.in-addr.arpa      name = darthsidious.starwars.lan.
+```
 
 ![192.168.20.11](./img/image-8.png)
