@@ -10,7 +10,7 @@ $TTL    604800
              604800 )    ; Negative Cache TTL
 ;
 @    IN    NS    darthsidious.starwars.lan.
-starwars.lan.    IN  A  172.24.0.100
+starwars.lan.    IN  A 192.168.20.10 
 darthvader  IN  A   192.168.20.10
 darthsidious    IN  A   192.168.20.11
 skywalker   IN  A   192.168.20.101
