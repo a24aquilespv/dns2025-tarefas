@@ -65,7 +65,6 @@ $~dig @localhost www.mecd.gob.es
 ;; QUESTION SECTION:
 ;www.mecd.gob.es.               IN      A
 
-;; ANSWER SECTION:
 www.mecd.gob.es.        21470   IN      A       212.128.114.116
 
 ;; Query time: 0 msec
@@ -189,7 +188,7 @@ Server:         localhost
 Address:        127.0.0.1#53
 
 Name:   starwars.lan
-Address: 172.24.0.100
+Address: 192.168.20.10
 ```
 
 ![starwars.lan](./img/image-2.png)
