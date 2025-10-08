@@ -32,6 +32,8 @@ services:
       rededns:
         ipv4_address: 172.24.0.10
     dns: 172.24.0.100
+
+# Subred
 networks:
   rededns:
     ipam:
