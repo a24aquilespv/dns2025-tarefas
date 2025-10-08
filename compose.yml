@@ -3,7 +3,7 @@ services:
     build: dnsserver
     hostname: darthvader
     ports:
-      - 127.0.0.1:53:53    #So na rede principal
+      - 127.0.0.1:53:53
     volumes:
       - ./dnsserver/named.conf.options:/etc/bind/named.conf.options
       - ./dnsserver/named.conf.local:/etc/bind/named.conf.local
@@ -13,6 +13,13 @@ services:
       rededns:
         ipv4_address: 172.24.0.100
     dns: 127.0.0.1
+
+  dnssecundario:
+    build: dnssecundario
+    hostname: darthsidious
+    ports:
+      - 127.0.0.1:53:5353
+
   cliente:
     build: cliente
     hostname: cliente1
