@@ -19,6 +19,11 @@ services:
     hostname: darthsidious
     ports:
       - 127.0.0.1:53:5353
+    networks:
+      rededns:
+        ipv4_address: 172.24.0.101
+    dns: 127.0.0.1
+
 
   cliente:
     build: cliente
