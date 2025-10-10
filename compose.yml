@@ -16,6 +16,8 @@ services:
     build: dnssecundario
     hostname: darthsidious
     # command: ["tail", "-f /dev/null"]
+    volumes:
+      - ./dnssecundario/named.conf.local:/etc/bind/named.conf.local
     networks:
       rededns:
         ipv4_address: 172.24.0.101
