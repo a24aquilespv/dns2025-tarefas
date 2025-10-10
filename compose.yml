@@ -15,6 +15,7 @@ services:
   dnssecundario:
     build: dnssecundario
     hostname: darthsidious
+    # command: ["tail", "-f /dev/null"]
     networks:
       rededns:
         ipv4_address: 172.24.0.101
