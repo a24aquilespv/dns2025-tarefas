@@ -5,9 +5,15 @@
 zone "starwars.lan" {
 	type master;
 	file "/etc/bind/db.starwars.lan";
+	allow-trasfer {
+		172.24.0.101;
+	};
 };
 
 zone "20.168.192.in-addr.arpa" {
 	type master;
 	file "/etc/bind/db.20.168.192";
+	allow-trasfer {
+		172.24.0.101;
+	};
 };
