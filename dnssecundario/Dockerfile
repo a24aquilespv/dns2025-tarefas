@@ -13,7 +13,7 @@ RUN apt update && apt install -y \
 
 RUN mkdir -p /dns
 COPY entrypoint.sh /dns
-RUN chmod a+x entrypoint.sh
+RUN chmod a+x /dns/entrypoint.sh
 EXPOSE 53/tcp
 
 WORKDIR /etc/bind
