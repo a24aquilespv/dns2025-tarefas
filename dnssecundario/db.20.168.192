@@ -1,0 +1,12 @@
+;
+; Zona directa para starwars.lan
+;
+$TTL    604800
+@    IN    SOA    darthsidious.starwars.lan. admin.starwars.lan. (
+                  0        ; Serial
+             604800        ; Refresh
+              86400        ; Retry
+            2419200        ; Expire
+             604800 )    ; Negative Cache TTL
+;
+@    IN    NS    darthsidious.starwars.lan.
