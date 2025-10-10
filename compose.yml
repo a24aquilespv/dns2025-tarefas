@@ -33,6 +33,11 @@ services:
         ipv4_address: 172.24.0.10
     dns: 172.24.0.100
 
+    # Configurar el search (/etc/resolv.conf)
+    dns_opt:
+      - ndtos:2
+    dns_search: starwars.lan
+
 # Subred
 networks:
   rededns:
