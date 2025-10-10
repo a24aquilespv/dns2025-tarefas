@@ -18,6 +18,8 @@ services:
     # command: ["tail", "-f /dev/null"]
     volumes:
       - ./dnssecundario/named.conf.local:/etc/bind/named.conf.local
+      - ./dnssecundario/db.starwars.lan:/etc/bind/db.starwars.lan
+      - ./dnssecundario/db.20.168.192:/etc/bind/db.20.168.192
     networks:
       rededns:
         ipv4_address: 172.24.0.101
