@@ -15,9 +15,15 @@ services:
   dnssecundario:
     build: dnssecundario
     hostname: darthsidious
+
+    # depends_on: Hace que se levante el contenedor solo si
+    # el contenedor indicado ya se ha levantado
+    depends_on:
+      - dnsserver
     # command: ["tail", "-f /dev/null"]
     volumes:
       - ./dnssecundario/named.conf.local:/etc/bind/named.conf.local
+      - ./dnssecundario/named.conf.options:/etc/bind/named.conf.options
       - ./dnssecundario/db.starwars.lan:/etc/bind/db.starwars.lan
       - ./dnssecundario/db.20.168.192:/etc/bind/db.20.168.192
     networks:
@@ -34,8 +40,9 @@ services:
     dns: 172.24.0.100
 
     # Configurar el search (/etc/resolv.conf)
+    # Si ndots vale 0 no acepta nombres relativos
     dns_opt:
-      - ndtos:2
+      - ndots:2
     dns_search: starwars.lan
 
 # Subred

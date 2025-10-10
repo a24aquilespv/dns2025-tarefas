@@ -4,7 +4,7 @@
 
 zone "starwars.lan" {
     type slave;
-    file "/etc/bind/db.starwars.lan";
+    file "db.starwars.lan";
     masters {
         172.24.0.100;
     };
@@ -12,7 +12,7 @@ zone "starwars.lan" {
 
 zone "20.168.192.in-addr.arpa" {
     type slave;
-    file "/etc/bind/db.20.168.192";
+    file "db.20.168.192";
     masters {
         172.24.0.100;
     };
