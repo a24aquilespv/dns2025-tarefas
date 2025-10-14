@@ -12,7 +12,6 @@ $TTL    604800
 ;
 @    IN    NS    darthsidious.starwars.lan.
 10  IN  PTR darthvader.starwars.lan.
-11  IN  PTR darthsidious.starwars.lan.
 22  IN  PTR luke.starwars.lan.
 24  IN  PTR yoda.starwars.lan.
 25  IN  PTR yoda.starwars.lan.

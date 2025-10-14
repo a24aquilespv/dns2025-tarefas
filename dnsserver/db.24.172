@@ -1,5 +1,6 @@
 ;
-; Zona directa para starwars.lan
+; Zona de bñusqueda inversa para 
+; IPs de la subred 172.24.0.0/16
 ;
 $TTL    604800
 @    IN    SOA    darthsidious.starwars.lan. admin.starwars.lan. (
@@ -10,3 +11,4 @@ $TTL    604800
              604800 )    ; Negative Cache TTL
 ;
 @    IN    NS    darthsidious.starwars.lan.
+101.0   IN  NS   darthsidious.starwars.lan.
