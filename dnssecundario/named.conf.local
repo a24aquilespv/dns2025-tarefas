@@ -5,6 +5,8 @@
 zone "starwars.lan" {
     type slave;
     file "db.starwars.lan";
+
+    // Indicar cual es el servidor autoritativo de la zona
     masters {
         172.24.0.100;
     };

@@ -5,6 +5,8 @@
 zone "starwars.lan" {
 	type master;
 	file "/etc/bind/db.starwars.lan";
+
+	// Permitir transferencias de zona a ips
 	allow-transfer {
 		172.24.0.101;
 	};
