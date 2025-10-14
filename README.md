@@ -1,3 +1,5 @@
+# TAREAS
+
 # Tarefa 1.1: Instalación de zonas mestras primarias
 
 O obxectivo desta tarefa é instalar o servidor DNS BIND9 nunha máquina virtual con Debian 12.
@@ -42,3 +44,6 @@ Crea un ficheiro Markdown con extension .md coas capturas que fagas para demostr
 -   nslookup -q=soa starwars.lan localhost
 -   nslookup -q=txt lenda.starwars.lan localhost
 -   nslookup 192.168.20.11 localhost
+
+
+# Tarefa 1.3: Instalación de zonas secundarias
