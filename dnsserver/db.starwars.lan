@@ -3,7 +3,7 @@
 ;
 $TTL    604800
 @    IN    SOA    darthvader.starwars.lan. admin.starwars.lan. (
-                  12        ; Serial
+                  13        ; Serial
              604800        ; Refresh
               86400        ; Retry
             2419200        ; Expire
@@ -21,7 +21,7 @@ luke    IN  A   192.168.20.22
 yoda    IN  A   192.168.20.24
 yoda    IN  A   192.168.20.25
 c3p0    IN  A   192.168.20.26
-chewbacca IN A  192.168.20.58
+chewbacca IN A  192.168.20.28
 palpatine   IN  CNAME   darthsidious.starwars.lan.
 @   IN  MX  10  c3p0.starwars.lan.
 lenda   IN TXT "Hola dns secundario" 
