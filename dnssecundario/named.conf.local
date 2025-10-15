@@ -11,7 +11,7 @@ key "clave_tsig" {
 
 // Indicar a que servidor autoritativo le va a hacer las transferencias de zona,
 // empleando la clave "clave_tsig"
-server 172.20.0.100 {
+server 172.24.0.100 {
     keys {
         "clave_tsig";
     };
