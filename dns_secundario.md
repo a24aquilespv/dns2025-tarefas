@@ -14,4 +14,19 @@
 ![Transferencia de zona](./img/img_3_tarea_1_3.png)
 
 - Forzar tansferencia de zona: `$ dig axfr starwars.lan @172.24.0.100`
-![Forzar transferencia de zona ](./img/img_2_tarea_1_4.png)
+![Forzar transferencia de zona ](./img/img_4_tarea_1_3.png)
+
+
+
+## 2. Transferencia de zona la reiniciar y registro de chewbacca.starwars.lan
+
+
+###### **- Transferencia de zona al reiniciar los contenedores**
+![transferencia de zona al reiniciar ambos servidores](./img/img_5_tarea_1_3.png)
+
+###### **- Fichero de la zona db.starwars.lan en el darthsidious**
+![fichero starwars.lan en darthsidious](./img/img_6_tarea_1_3.png)
+
+## 3. Comprobar que el darhtsidous puede resolver el nuevo chewbacca.starwars.lan
+- $ dig chewbacca.starwars.lan
+![resolver el chewbacca](./img/img_7_tarea_1_3.png)
