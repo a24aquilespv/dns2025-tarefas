@@ -35,3 +35,7 @@
 ## 4. Lo mismo que el apartado 2, pero ahora usando una clave TSIG
 
 ###### **- Transferencia de zona al reiniciar los contenedores**
+![axfr automático al levantar los servidores](./img/img_8_tarea_1_3.png)
+
+###### **- Fichero de la zona db.starwars.lan en el darthsidious**
+![zona compilada de starwars.lan en darthsidious](./img/img_9_tarea_1_3.png)
