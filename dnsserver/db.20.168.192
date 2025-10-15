@@ -4,7 +4,7 @@
 ;
 $TTL    604800
 @    IN    SOA    darthvader.starwars.lan. admin.starwars.lan. (
-                  3        ; Serial
+                  4        ; Serial
              604800        ; Refresh
               86400        ; Retry
             2419200        ; Expire

@@ -30,3 +30,8 @@
 ## 3. Comprobar que el darhtsidous puede resolver el nuevo chewbacca.starwars.lan
 - $ dig chewbacca.starwars.lan
 ![resolver el chewbacca](./img/img_7_tarea_1_3.png)
+
+
+## 4. Lo mismo que el apartado 2, pero ahora usando una clave TSIG
+
+###### **- Transferencia de zona al reiniciar los contenedores**
