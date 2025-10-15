@@ -2,13 +2,21 @@
 // Do any local configuration here
 //
 
+
+// Clave tsig
+key "clave_tsig" {
+        algorithm hmac-sha256;
+        secret "thxHgCUYmH1QfGXwl5ij3wX0bGIoWQRkHYZ0qT8sV5c=";
+};
+
+
 zone "starwars.lan" {
 	type master;
 	file "/etc/bind/db.starwars.lan";
 
 	// Permitir transferencias de zona a ips
 	allow-transfer {
-		172.24.0.101;
+		key "clave_tsig";
 	};
 };
 
@@ -16,7 +24,7 @@ zone "20.168.192.in-addr.arpa" {
 	type master;
 	file "/etc/bind/db.20.168.192";
 	allow-transfer {
-		172.24.0.101;
+		key "clave_tsig";
 	};
 };
 
@@ -24,6 +32,6 @@ zone "24.172.in-addr.arpa" {
 	type master;
 	file "/etc/bind/db.24.172";
 	allow-transfer {
-		172.24.0.101;
+		key "clave_tsig";
 	};
 };
