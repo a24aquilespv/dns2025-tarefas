@@ -2,6 +2,21 @@
 // Do any local configuration here
 //
 
+
+// Clave tsig
+key "clave_tsig" {
+    algorithm hmac-sha256;
+    secret "thxHgCUYmH1QfGXwl5ij3wX0bGIoWQRkHYZ0qT8sV5c=";
+};
+
+// Indicar a que servidor autoritativo le va a hacer las transferencias de zona,
+// empleando la clave "clave_tsig"
+server 172.20.0.100 {
+    keys {
+        "clave_tsig";
+    };
+};
+
 zone "starwars.lan" {
     type slave;
     file "db.starwars.lan";
@@ -17,7 +32,7 @@ zone "20.168.192.in-addr.arpa" {
     file "db.20.168.192";
     masters {
         172.24.0.100;
-    };
+    // };
 };
 
 zone "24.172.in-addr.arpa" {

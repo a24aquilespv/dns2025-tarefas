@@ -5,8 +5,8 @@
 
 // Clave tsig
 key "clave_tsig" {
-        algorithm hmac-sha256;
-        secret "thxHgCUYmH1QfGXwl5ij3wX0bGIoWQRkHYZ0qT8sV5c=";
+	algorithm hmac-sha256;
+	secret "thxHgCUYmH1QfGXwl5ij3wX0bGIoWQRkHYZ0qT8sV5c=";
 };
 
 
