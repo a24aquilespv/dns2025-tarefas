@@ -17,6 +17,8 @@ zone "starwars.lan" {
 	// Permitir transferencias de zona a ips
 	allow-transfer {
 		key "clave_tsig";
+		172.24.0.103;
+		172.24.0.104;
 	};
 };
 
@@ -25,6 +27,11 @@ zone "20.168.192.in-addr.arpa" {
 	file "/etc/bind/db.20.168.192";
 	allow-transfer {
 		key "clave_tsig";
+
+		// Permitir hacer transferencias de zona a servidor dns autoritativo
+		// de Windows (lukeskywalker)
+		172.24.0.103;
+		172.24.0.104;
 	};
 };
 
@@ -33,5 +40,7 @@ zone "24.172.in-addr.arpa" {
 	file "/etc/bind/db.24.172";
 	allow-transfer {
 		key "clave_tsig";
+		172.24.0.103;
+		172.24.0.104;
 	};
 };

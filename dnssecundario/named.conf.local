@@ -42,3 +42,14 @@ zone "24.172.in-addr.arpa" {
         172.24.0.100;
     };
 };
+
+
+zone "academia.jedi" {
+    type slave;
+    file "db.academia.jedi";
+
+    // Indicar cual es el servidor autoritativo de la zona
+    masters {
+        172.24.0.103;
+    };
+};
