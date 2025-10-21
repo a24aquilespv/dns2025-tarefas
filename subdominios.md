@@ -17,5 +17,3 @@
 ###### root@cliente1:/# dig @172.24.0.103 macewindu.mestre.academia.jedi
 
 ![resolver subdominio virutal macewindu](./img/img_2_tarea_1_5.png)
-
-
