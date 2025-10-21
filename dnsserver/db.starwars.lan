@@ -3,7 +3,7 @@
 ;
 $TTL    604800
 @    IN    SOA    darthvader.starwars.lan. admin.starwars.lan. (
-                  15        ; Serial
+                  16        ; Serial
              604800        ; Refresh
               86400        ; Retry
             2419200        ; Expire
@@ -26,3 +26,7 @@ palpatine   IN  CNAME   darthsidious.starwars.lan.
 @   IN  MX  10  c3p0.starwars.lan.
 lenda   IN TXT "Hola dns secundario" 
 test	IN	TXT	"Forzar transferencia de zona: dig axfr <zona> @ip_dns_autoritativo"
+
+$ORIGIN antigarepublica.starwars.lan.
+xendor  IN  A 192.168.20.222
+ardenlyn  IN  A 192.168.20.223
