@@ -27,6 +27,10 @@ palpatine   IN  CNAME   darthsidious.starwars.lan.
 lenda   IN TXT "Hola dns secundario" 
 test	IN	TXT	"Forzar transferencia de zona: dig axfr <zona> @ip_dns_autoritativo"
 
+; Subdominio virtual antigarepublica
 $ORIGIN antigarepublica.starwars.lan.
 xendor  IN  A 192.168.20.222
 ardenlyn  IN  A 192.168.20.223
+
+; Subdominio delegado de la zona starwars.lan
+

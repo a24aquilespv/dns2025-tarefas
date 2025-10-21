@@ -18,5 +18,4 @@ EXPOSE 53/tcp
 
 WORKDIR /etc/bind
 
-
 ENTRYPOINT [ "/dns/entrypoint.sh" ]

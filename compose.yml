@@ -30,11 +30,19 @@ services:
         ipv4_address: 172.24.0.101
     dns: 127.0.0.1
 
-    # leia:
-    #   build: ./leia
-    #   hostname: leia
+  leia:
+    build: ./leia
+    hostname: leia
 
-    #   depends_on:
+    depends_on:
+      - dnsserver
+
+    # volumes:
+    #   - 
+    networks:
+      rededns:
+        ipv4_address: 172.24.0.110
+    dns: 127.0.0.1
 
   cliente:
     build: cliente
