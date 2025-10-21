@@ -3,7 +3,7 @@
 ;
 $TTL    604800
 @    IN    SOA    darthvader.starwars.lan. admin.starwars.lan. (
-                  16        ; Serial
+                  17        ; Serial
              604800        ; Refresh
               86400        ; Retry
             2419200        ; Expire
@@ -29,8 +29,12 @@ test	IN	TXT	"Forzar transferencia de zona: dig axfr <zona> @ip_dns_autoritativo"
 
 ; Subdominio virtual antigarepublica
 $ORIGIN antigarepublica.starwars.lan.
+
 xendor  IN  A 192.168.20.222
 ardenlyn  IN  A 192.168.20.223
 
-; Subdominio delegado de la zona starwars.lan
+; Delegar subdominio imperio a leia
+$ORIGIN imperio
 
+@ IN  NS  leia
+leia  IN  A 172.24.0.110

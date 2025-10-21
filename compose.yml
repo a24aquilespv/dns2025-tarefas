@@ -37,8 +37,11 @@ services:
     depends_on:
       - dnsserver
 
-    # volumes:
-    #   - 
+    volumes:
+      - ./leia/named.conf.local:/etc/bind/named.conf.local
+      - ./leia/named.conf.options:/etc/bind/named.conf.options
+      - ./leia/db.imperio.starwars.lan:/etc/bind/db.imperio.starwars.lan
+
     networks:
       rededns:
         ipv4_address: 172.24.0.110

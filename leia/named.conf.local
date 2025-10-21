@@ -1,0 +1,14 @@
+//
+// Do any local configuration here
+//
+
+
+// Subdominio delegado desde darthvader (starwars.lan)
+zone "imperio.starwars.lan" {
+	type master;
+	file "/etc/bind/db.imperio.starwars.lan";
+
+	// allow-transfer {
+	// 	172.24.0.100;
+	// };
+};

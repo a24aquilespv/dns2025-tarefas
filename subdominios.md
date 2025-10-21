@@ -34,3 +34,10 @@
 **- Resolver ardenlyn**
 ![resolver ardenlyn](./img/img_11_tarea_1_3.png)
 
+
+
+
+ESTO NO VA AQUI
+NO BORRAR
+![importante](image.png)
+

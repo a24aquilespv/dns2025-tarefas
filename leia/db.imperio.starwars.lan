@@ -1,0 +1,15 @@
+;
+; Zona directa para starwars.lan
+;
+$TTL    604800
+@        IN        SOA  leia.imperio.starwars.lan. imperio.starwars.lan. (
+                        1 ; serial
+                        30800      ; refresh
+                        7200       ; retry
+                        604800     ; expire
+                        300 )      ; minimum
+@         IN        NS    leia.imperio.starwars.lan.
+
+leia    IN  A   172.24.0.110
+tsuichoi    IN  A   192.168.20.225
+bultarswan    IN  A   192.168.20.226
