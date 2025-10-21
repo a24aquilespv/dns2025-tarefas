@@ -13,5 +13,5 @@ $TTL    604800
 @    IN    NS    darthvader.starwars.lan.
 @    IN    NS    darthsidious.starwars.lan.
 
-100.0	IN  NS	 darthvader.starwars.lan.
-101.0   IN  NS   darthsidious.starwars.lan.
+100.0	IN  PTR	 darthvader.starwars.lan.
+101.0   IN  PTR   darthsidious.starwars.lan.
