@@ -20,7 +20,10 @@
 
 
 
-## 2.Instala no equipo darthvader un subdominio chamado antigarepublica, e nel os rexistros:
+## 2. 
+
+
+## 3.Instala no equipo darthvader un subdominio virtual chamado antigarepublica, e nel os rexistros:
 
 **- Subdominio virtual antigarepublica**
 ![Subdominio antigarepublica](./img/img_13_tarea_1_3.png)
@@ -35,6 +38,9 @@
 ![resolver ardenlyn](./img/img_11_tarea_1_3.png)
 
 
+
+
+## 4. Instala no equipo leia (Debian/Ubuntu Server) un subdominio delegado de "starwars.lan" chamado imperio. Engade nel os rexistros
 
 
 ESTO NO VA AQUI

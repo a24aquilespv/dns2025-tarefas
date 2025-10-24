@@ -1,9 +1,10 @@
 options {
         directory "/var/cache/bind";
-//        forwarders {
-//                8.8.8.8;
-//                8.8.4.4;
-//        };
+       forwarders {
+        //        8.8.8.8;
+        //        8.8.4.4;
+        172.24.0.110;      
+};
 
         listen-on {
                 127.0.0.1;
@@ -13,3 +14,9 @@ options {
         listen-on-v6 {none;};
 };
 
+// Logs de las queries dns
+// logging {
+//         channel query.log {
+//                 file "/var/log/named/query.log";
+//         };
+// };

@@ -8,7 +8,7 @@ zone "imperio.starwars.lan" {
 	type master;
 	file "/etc/bind/db.imperio.starwars.lan";
 
-	// allow-transfer {
-	// 	172.24.0.100;
-	// };
+	allow-transfer {
+		172.24.0.100;
+	};
 };
