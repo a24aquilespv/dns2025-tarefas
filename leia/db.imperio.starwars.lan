@@ -2,7 +2,7 @@
 ; Zona directa para starwars.lan
 ;
 $TTL    604800
-@        IN        SOA  leia.imperio.starwars.lan. imperio.starwars.lan. (
+@        IN        SOA  leia.imperio.starwars.lan. admin.imperio.starwars.lan. (
                         1 ; serial
                         30800      ; refresh
                         7200       ; retry
