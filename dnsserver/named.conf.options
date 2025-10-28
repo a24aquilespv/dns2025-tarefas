@@ -1,22 +1,29 @@
+logging {
+    channel query.log {
+        file "/logs/query.log";
+
+        // dynamic: Registrar cualquier log
+        severity dynamic;
+    };
+
+    category queries { 
+        query.log; 
+    };
+};
+
+
 options {
-        directory "/var/cache/bind";
-       forwarders {
-        //        8.8.8.8;
-        //        8.8.4.4;
+    directory "/var/cache/bind";
+    forwarders {
+//        8.8.8.8;
+//        8.8.4.4;
         172.24.0.110;      
+    };
+
+    listen-on {
+        127.0.0.1;
+        172.24.0.100;
+    };
+
+    listen-on-v6 {none;};
 };
-
-        listen-on {
-                127.0.0.1;
-                172.24.0.100;
-        };
-
-        listen-on-v6 {none;};
-};
-
-// Logs de las queries dns
-// logging {
-//         channel query.log {
-//                 file "/var/log/named/query.log";
-//         };
-// };

@@ -2,13 +2,17 @@ services:
   dnsserver:
     build: dnsserver
     hostname: darthvader
-    command: ["-g"]
+
+    # Para los logs utilizar el argumento -f
+    # command: ["-g"]
+    command: ["-f"]
     volumes:
       - ./dnsserver/named.conf.options:/etc/bind/named.conf.options
       - ./dnsserver/named.conf.local:/etc/bind/named.conf.local
       - ./dnsserver/db.starwars.lan:/etc/bind/db.starwars.lan
       - ./dnsserver/db.20.168.192:/etc/bind/db.20.168.192
       - ./dnsserver/db.24.172:/etc/bind/db.24.172
+      - ./dnsserver/logs:/logs
     networks:
       rededns:
         ipv4_address: 172.24.0.100
