@@ -40,9 +40,19 @@
 ## 4. Instala no equipo leia (Debian/Ubuntu Server) un subdominio delegado de "starwars.lan" chamado imperio. Engade nel os rexistros indicados no enunciado
 
 **- Darthvader: Zona starwars.lan**
-
-
+![zona starwars.lan](./img/img_4_tarea_1_5.png)
 
 
 **- Leia: Zona imperio.starwars.lan**
+![zona imperio.starwars.lan](./img/img_5_tarea_1_5.png)
 
+
+**- Resolver leia.imperio.starwars.lan**
+![resolver leia](./img/img_6_tarea_1_5.png)
+
+
+**- Resolver tsuichoi.imperio.starwars.lan**
+![resolver tsuichoi](./img/img_8_tarea_1_5.png)
+
+**- Resolver bultarswan.imperio.starwars.lan**
+![resolver bultarswan](./img/img_7_tarea_1_5.png)
