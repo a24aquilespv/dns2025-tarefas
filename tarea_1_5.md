@@ -20,9 +20,6 @@
 
 
 
-## 2. 
-
-
 ## 3.Instala no equipo darthvader un subdominio virtual chamado antigarepublica, e nel os rexistros:
 
 **- Subdominio virtual antigarepublica**
