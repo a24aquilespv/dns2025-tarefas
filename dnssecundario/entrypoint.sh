@@ -1,4 +1,4 @@
 #!/usr/bin/bash
 
 
-named -4 -g -u bind
+named -4 -u bind "$@"

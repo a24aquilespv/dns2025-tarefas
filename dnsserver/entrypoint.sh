@@ -2,4 +2,4 @@
 
 
 #chmod a+x safsdadfs
-named -g -u bind "$@"
+named -u bind "$@"

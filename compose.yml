@@ -2,6 +2,7 @@ services:
   dnsserver:
     build: dnsserver
     hostname: darthvader
+    command: ["-g"]
     volumes:
       - ./dnsserver/named.conf.options:/etc/bind/named.conf.options
       - ./dnsserver/named.conf.local:/etc/bind/named.conf.local
@@ -16,7 +17,7 @@ services:
   dnssecundario:
     build: dnssecundario
     hostname: darthsidious
-
+    command: ["-g"]
     # depends_on: Hace que se levante el contenedor solo si
     # el contenedor indicado ya se ha levantado
     depends_on:
@@ -33,6 +34,7 @@ services:
   leia:
     build: ./leia
     hostname: leia
+    command: ["-g"]
 
     depends_on:
       - dnsserver
