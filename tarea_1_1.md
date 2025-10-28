@@ -1,4 +1,4 @@
-# Respuestas
+# Respuestas Tarefa 1.3: Instalación de zonas secundarias
 
 
 ## 1. Instala o servidor BIND9 no equipo darthvader. Comproba que xa funciona coma servidor DNS caché pegando no documento de entrega a saída deste comando dig @localhost www.edu.xunta.es
