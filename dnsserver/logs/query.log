@@ -1,0 +1,6 @@
+client @0x7a1779442000 172.24.0.101#58216/key clave_tsig (24.172.in-addr.arpa): query: 24.172.in-addr.arpa IN SOA -E(0)S (172.24.0.100)
+client @0x7a1751834000 172.24.0.101#54942/key clave_tsig (starwars.lan): query: starwars.lan IN SOA -E(0)S (172.24.0.100)
+client @0x7a174f242000 172.24.0.101#51925/key clave_tsig (20.168.192.in-addr.arpa): query: 20.168.192.in-addr.arpa IN SOA -E(0)S (172.24.0.100)
+client @0x7a176aa2d000 172.24.0.101#34139/key clave_tsig (24.172.in-addr.arpa): query: 24.172.in-addr.arpa IN AXFR -E(0)ST (172.24.0.100)
+client @0x7a1761c42000 172.24.0.101#40571/key clave_tsig (starwars.lan): query: starwars.lan IN AXFR -E(0)ST (172.24.0.100)
+client @0x7a174e042000 172.24.0.101#35897/key clave_tsig (20.168.192.in-addr.arpa): query: 20.168.192.in-addr.arpa IN AXFR -E(0)ST (172.24.0.100)
